@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instacram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <script type="module" src="src/api.js"></script>
+</head>
+<body>
+	<div id="all" class="all">
+        <div id="register" class="register">
+            <div class="logo1">
+                <h2>Instacram</h2>
+                <div class="input_outer">
+                    <span class="user1"></span>
+                    <input id="username" class="text" style="color: #FFFFFF !important" type="text" placeholder="Username" required>
+                </div>
+                <div class="input_outer">
+                    <span class="user1"></span>
+                    <input id="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;" value="" type="password" placeholder="Password" required>
+                </div>
+                <div class="error" id="error"><br></div>
+                <div>
+                    <button  type="button" class="lb1" id="login_but" style="color: #FFFFFF">Login</button>
+                </div>
+                <div>
+                    <button  class="lb2" id="register_but0" style="color: #FFFFFF">Register</a></button>
+                </div>
+            </div>
+        </div>
+        <div id="info" class="info" style = "display:none;">
+            <div class="logo2">
+                <h2>Register</h2>
+                <div class="input_outer">
+                    <span class="user2"></span>
+                    <input id="email" class="text" style="color: #FFFFFF !important" type="text" placeholder="Enter you email" required>
+                </div>
+                <div class="input_outer">
+                    <span class="user2"></span>
+                    <input id="log_username" class="text" style="color: #FFFFFF !important" type="text" placeholder="Enter you username" required>
+                </div>
+                <div class="input_outer">
+                    <span class="user2"></span>
+                    <input id="name" class="text" style="color: #FFFFFF !important" type="text" placeholder="Enter you name" required>
+                </div>
+                <div class="input_outer">
+                    <span class="user2"></span>
+                    <input id="log_password1" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;" value="" type="password" placeholder="Enter you password" required>
+                </div>
+                <div class="input_outer">
+                    <span class="user2"></span>
+                <input id="log_password2" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;" value="" type="password" placeholder="Enter you password" required>
+                </div>
+                <div class="error" id="error"><br></div>
+                <div>
+                    <button class="lb1" id="register_but" style="color: #FFFFFF">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;">
+    <div id="instacram" style = "display:none;">
+        <main role='main'>
+            <header id="header">
+                 <div class="profile" id="profile">
+                    <h2>
+                        <a>my profile</a>
+                </div>
+
+                <div class="logout">
+                    <h2>
+                        <a onclick="window.location.reload();">logout</a>
+                </div>
+                <div class="logo0">
+                    <h1>
+                        <a>Instacram</a>
+                    <h3>
+                        <a>Find your real life.</a>
+                </div>
+                    <div class="menu-container">
+                    </div>
+                </header>   
+            <section class="section-content">
+            <body class= feed" id="feed">
+                <div id = "large-feed">
+                     <div id="float" class="float">
+                        <div class="Main"> 
+                            <div class="Input_head">
+                                <a id = "addImage"class="postBtn">Add an Image</a> </div> 
+                            </div>    
+                            <div class="Input_Box">     
+                            <textarea class="Input_text"></textarea>         
+                            <div class="Input_Foot"> 
+                                <a id = "post" class="postBtn">POST</a> </div>     
+                            </div>     
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="userprofile" id = "userprofile" style = "display:none;">
+                    <h2>
+                        <a>Username:</a>
+                        <p id="my_username"> 0 </p>
+                        <a>Email:</a>
+                        <p id="my_email" > 0 </p>
+                        <a>Name:</a>
+                        <p id="my_name"> 0 </p>
+                        <a>Following:</a>
+                        <p id="my_following"> 0 </p>
+                        <button class="lbs" id="change_profile">change my profile</button>
+                        <button class="lbs" id="back">back</button>
+                </div>
+                <div class="userprofile" id = "userprofile_followed" style = "display:none;">
+                    <h2>
+                        <a>Username:</a>
+                        <p id="my_username1"> 0 </p>
+                        <a>Email:</a>
+                        <p id="my_email1" > 0 </p>
+                        <a>Name:</a>
+                        <p id="my_name1"> 0 </p>
+                        <a>Following:</a>
+                        <p id="my_following1"> 0 </p>
+                        <button class="lbs" id="unfollow">Unfollow</button>
+                        <button class="lbs" id="back_a">back</button>
+                </div>
+                <div class="userprofile" id = "userprofile_unfollow" style = "display:none;">
+                    <h2>
+                        <a>Username:</a>
+                        <p id="my_username2"> 0 </p>
+                        <a>Email:</a>
+                        <p id="my_email2" > 0 </p>
+                        <a>Name:</a>
+                        <p id="my_name2"> 0 </p>
+                        <a>Following:</a>
+                        <p id="my_following2"> 0 </p>
+                        <button class="lbs" id="followed">Follow</button>
+                        <button class="lbs" id="back_b">back</button>
+                </div>
+                <div class="changeprofile" id = "changeprofile" style = "display:none;">
+                    <div class="input_outer1">
+                        <span class="user3"></span>
+                        <input id="new_email" class="text1" type="text" placeholder="Please Enter new email" required>
+                    </div>
+                    <div class="input_outer1">
+                        <span class="user3"></span>
+                        <input id="new_name" class="text1" type="text" placeholder="Please Enter new name" required>
+                    </div>
+                    <div class="input_outer1">
+                        <span class="user3"></span>
+                        <input id="new_password1" class="text1" value="" type="password" placeholder="Please enter new password" required>
+                    </div>
+                    <div class="input_outer1">
+                        <span class="user3"></span>
+                        <input id="new_password2" class="text1" value="" type="password" placeholder="Please enter new password" required>
+                    </div>
+                    <div>
+                        <button class="lbs" id="Submit_change">Submit</button>
+                        <button class="lbs" id="back1">back</button>
+                    </div>
+                </div>
+            </body>
+        </main>
+    </div>
+    <div style="text-align:center;">
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
